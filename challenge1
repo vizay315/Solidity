@@ -1,0 +1,36 @@
+CHALLENGE:1
+Write a simple contract and declare four different types of variables.
+Write get and set functions for each of these variables. Return the value of the variable in the “set function”.
+
+CODE STARTS HERE:
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.7;
+
+contract store {
+    uint myMobileNumber;
+    string myName;
+    bool lieDetector=true;
+    address myWallet;
+
+    function setValues(uint _age,string memory _name,address _ethAddress) public {
+        myMobileNumber=_age;
+        myName=_name;
+        myWallet=_ethAddress;
+    }
+    function getAge() public view returns(uint) {
+        return myMobileNumber;
+    }
+    
+    function getName() public view returns(string memory) {
+        return myName;
+    }
+    
+    function getAddress() public view returns(address) {
+        return myWallet;
+    }
+
+    function getBool() public view returns(bool) {
+        return lieDetector;           
+    }
+    
+}
