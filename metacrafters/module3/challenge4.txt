@@ -1,0 +1,27 @@
+//EXRECISE:Write a Solidity contract with 4 functions; add, subtract, multiply and divide 2 numbers.
+
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
+contract functions {
+    uint public x;
+    uint public y;
+
+    function get(uint _x,uint _y) public {
+        x=_x;
+        y=_y;
+    }
+
+    function add() public view returns(uint) {
+        return x+y;
+    }
+    function sub() public view returns(uint) {
+        return x-y;
+    }
+    function mul() public view returns(uint) {
+        return x*y;
+    }
+    function mod() public view returns(uint) {
+        return x%y;
+    }
+}
